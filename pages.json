@@ -1,54 +1,148 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/tabBar/movie/movie",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "电影"
 			}
-		}, {
-			"path": "pages/cinema/cinema",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
 		},
 		{
-			"path": "pages/mine/mine",
+			"path": "pages/tabBar/cinema/cinema",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
+				"navigationBarTitleText": "影院"
 			}
-		
+		},
+		{
+			"path": "pages/tabBar/user/user",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/subPages/city-select/city-select",
+			"style": {
+				"navigationBarTitleText": "选择城市"
+			}
+		},
+		{
+			"path": "pages/subPages/search-page/search-page",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		{
+			"path": "pages/subPages/movie-detail/movie-detail",
+			"style": {
+				"navigationBarTitleText": "影片详情"
+			}
+		},
+		{
+			"path": "pages/subPages/select-cinema/select-cinema",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/subPages/cinema-detail/cinema-detail",
+			"style": {
+				"navigationBarTitleText": "影院"
+			}
+		},
+		{
+			"path": "pages/subPages/cinema-map/cinema-map",
+			"style": {
+				"navigationBarTitleText": "位置信息"
+			}
+		},
+		{
+			"path": "pages/subPages/comment-page/comment-page",
+			"style": {
+				"navigationBarTitleText": "观众评论"
+			}
+		},
+		{
+			"path": "pages/subPages/about-page/about-page",
+			"style": {
+				"navigationBarTitleText": "关于"
+			}
+		},
+		{
+			"path": "pages/subPages/snack-page/snack-page",
+			"style": {
+				"navigationBarTitleText": "观影套餐"
+			}
+		},
+		{
+			"path": "pages/subPages/buy-ticket/buy-ticket",
+			"style": {
+				"navigationBarTitleText": "确认订单"
+			}
+		},
+		{
+			"path": "pages/subPages/movie-order/movie-order",
+			"style": {
+				"navigationBarTitleText": "电影订单"
+			}
+		},
+		{
+			"path": "pages/subPages/movie-order-detail/movie-order-detail",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/subPages/buy-snack/buy-snack",
+			"style": {
+				"navigationBarTitleText": "提交订单"
+			}
+		},
+		{
+			"path": "pages/subPages/snack-order/snack-order",
+			"style": {
+				"navigationBarTitleText": "小吃订单"
+			}
+		},
+		{
+			"path": "pages/subPages/video-page/video-page",
+			"style": {
+				"navigationBarTitleText": ""
+			}
 		}
 	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	},
-	"uniIdRouter": {},
 	"tabBar": {
-		"backgroundColor": "#ffffff",
-		"color": "#707070",
-		"selectedColor": "#ef4238",
-		"list": [{
-			"iconPath": "static/tab_bar/dianying1.png",
-			"selectedIconPath": "static/tab_bar/dianying2.png",
-			"text": "电影",
-			"pagePath": "pages/index/index"
-		}, {
-			"iconPath": "static/tab_bar/yingyuan1.png",
-			"selectedIconPath": "static/tab_bar/yingyuan2.png",
-			"text": "影院",
-			"pagePath": "pages/cinema/cinema"
-		}, {
-			"iconPath": "static/tab_bar/wode1.png",
-			"selectedIconPath": "static/tab_bar/wode2.png",
-			"text": "我的",
-			"pagePath": "pages/mine/mine"
-		}]
-
-	}
+		"color": "#696969",
+		"selectedColor": "#e54847",
+		"list": [
+			{
+				"pagePath": "pages/tabBar/movie/movie",
+				"text": "电影",
+				"iconPath": "static/assets/images/movie.png",
+				"selectedIconPath": "static/assets/images/movieSelect.png"
+			},
+			{
+				"pagePath": "pages/tabBar/cinema/cinema",
+				"text": "影院",
+				"iconPath": "static/assets/images/cinema.png",
+				"selectedIconPath": "static/assets/images/cinemaSelect.png"
+			},
+			{
+				"pagePath": "pages/tabBar/user/user",
+				"text": "我的",
+				"iconPath": "static/assets/images/user.png",
+				"selectedIconPath": "static/assets/images/userSelect.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json",
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置接口的效果展示"
+		}
+	},
+	"globalStyle": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#e54847",
+		"navigationBarTextStyle": "white"
+	},
+	"subPackages": []
 }

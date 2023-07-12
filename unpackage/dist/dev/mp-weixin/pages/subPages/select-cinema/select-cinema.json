@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "select-time": "/components/select-time/select-time",
+    "filter-nav": "/components/filter-nav/filter-nav",
+    "cinema-section": "/templates/cinemaSection/cinemaSection",
+    "nothing": "/templates/nothing/nothing",
+    "loading-more": "/templates/loadingMore/loadingMore"
+  }
+}

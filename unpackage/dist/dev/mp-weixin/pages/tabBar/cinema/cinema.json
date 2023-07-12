@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "影院",
+  "usingComponents": {
+    "filter-nav": "/components/filter-nav/filter-nav",
+    "cinema-section": "/templates/cinemaSection/cinemaSection",
+    "nothing": "/templates/nothing/nothing",
+    "loading-more": "/templates/loadingMore/loadingMore"
+  }
+}

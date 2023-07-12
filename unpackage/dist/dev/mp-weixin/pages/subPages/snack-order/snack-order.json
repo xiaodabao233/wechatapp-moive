@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小吃订单",
+  "usingComponents": {
+    "nothing": "/templates/nothing/nothing"
+  }
+}

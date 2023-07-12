@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "观影套餐",
+  "usingComponents": {
+    "cinema-map": "/templates/cinemaMap/cinemaMap"
+  }
+}

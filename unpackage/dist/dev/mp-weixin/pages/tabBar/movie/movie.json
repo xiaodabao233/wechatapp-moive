@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "电影",
+  "usingComponents": {
+    "movie-section": "/templates/movieSection/movieSection",
+    "nothing": "/templates/nothing/nothing",
+    "loading-more": "/templates/loadingMore/loadingMore"
+  }
+}

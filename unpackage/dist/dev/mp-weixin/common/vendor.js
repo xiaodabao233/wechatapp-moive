@@ -775,8 +775,8 @@ function populateParameters(result) {
   // wx.getAccountInfoSync
 
   var parameters = {
-    appId: "__UNI__E9C5913",
-    appName: "demo",
+    appId: "",
+    appName: "weapp-movie",
     appVersion: "1.0.0",
     appVersionCode: "100",
     appLanguage: getAppLanguage(hostLanguage),
@@ -874,8 +874,8 @@ var getAppBaseInfo = {
     var _hostName = getHostName(result);
     var hostLanguage = language.replace('_', '-');
     result = sortObject(Object.assign(result, {
-      appId: "__UNI__E9C5913",
-      appName: "demo",
+      appId: "",
+      appName: "weapp-movie",
       appVersion: "1.0.0",
       appVersionCode: "100",
       appLanguage: getAppLanguage(hostLanguage),
@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8934,7 +8934,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8955,14 +8955,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9058,7 +9058,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9477,9 +9477,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 26 */
-/*!************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/pages.json ***!
-  \************************************************************************/
+/*!******************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/pages.json ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9489,9 +9489,369 @@ internalMixin(Vue);
 /* 27 */,
 /* 28 */,
 /* 29 */,
-/* 30 */,
+/* 30 */
+/*!*****************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/assets/libs/qqmap-wx-jssdk.min.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {var _createClass = function () {
+  function a(e, c) {
+    for (var b = 0; b < c.length; b++) {
+      var d = c[b];
+      d.enumerable = d.enumerable || false;
+      d.configurable = true;
+      if ("value" in d) {
+        d.writable = true;
+      }
+      Object.defineProperty(e, d.key, d);
+    }
+  }
+  return function (d, b, c) {
+    if (b) {
+      a(d.prototype, b);
+    }
+    if (c) {
+      a(d, c);
+    }
+    return d;
+  };
+}();
+function _classCallCheck(a, b) {
+  if (!(a instanceof b)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+var ERROR_CONF = {
+  KEY_ERR: 311,
+  KEY_ERR_MSG: "key格式错误",
+  PARAM_ERR: 310,
+  PARAM_ERR_MSG: "请求参数信息有误",
+  SYSTEM_ERR: 600,
+  SYSTEM_ERR_MSG: "系统错误",
+  WX_ERR_CODE: 1000,
+  WX_OK_CODE: 200
+};
+var BASE_URL = "https://apis.map.qq.com/ws/";
+var URL_SEARCH = BASE_URL + "place/v1/search";
+var URL_SUGGESTION = BASE_URL + "place/v1/suggestion";
+var URL_GET_GEOCODER = BASE_URL + "geocoder/v1/";
+var URL_CITY_LIST = BASE_URL + "district/v1/list";
+var URL_AREA_LIST = BASE_URL + "district/v1/getchildren";
+var URL_DISTANCE = BASE_URL + "distance/v1/";
+var Utils = {
+  location2query: function location2query(c) {
+    if (typeof c == "string") {
+      return c;
+    }
+    var b = "";
+    for (var a = 0; a < c.length; a++) {
+      var e = c[a];
+      if (!!b) {
+        b += ";";
+      }
+      if (e.location) {
+        b = b + e.location.lat + "," + e.location.lng;
+      }
+      if (e.latitude && e.longitude) {
+        b = b + e.latitude + "," + e.longitude;
+      }
+    }
+    return b;
+  },
+  getWXLocation: function getWXLocation(c, b, a) {
+    uni.getLocation({
+      type: "gcj02",
+      success: c,
+      fail: b,
+      complete: a
+    });
+  },
+  getLocationParam: function getLocationParam(b) {
+    if (typeof b == "string") {
+      var a = b.split(",");
+      if (a.length === 2) {
+        b = {
+          latitude: b.split(",")[0],
+          longitude: b.split(",")[1]
+        };
+      } else {
+        b = {};
+      }
+    }
+    return b;
+  },
+  polyfillParam: function polyfillParam(a) {
+    a.success = a.success || function () {};
+    a.fail = a.fail || function () {};
+    a.complete = a.complete || function () {};
+  },
+  checkParamKeyEmpty: function checkParamKeyEmpty(c, b) {
+    if (!c[b]) {
+      var a = this.buildErrorConfig(ERROR_CONF.PARAM_ERR, ERROR_CONF.PARAM_ERR_MSG + b + "参数格式有误");
+      c.fail(a);
+      c.complete(a);
+      return true;
+    }
+    return false;
+  },
+  checkKeyword: function checkKeyword(a) {
+    return !this.checkParamKeyEmpty(a, "keyword");
+  },
+  checkLocation: function checkLocation(c) {
+    var a = this.getLocationParam(c.location);
+    if (!a || !a.latitude || !a.longitude) {
+      var b = this.buildErrorConfig(ERROR_CONF.PARAM_ERR, ERROR_CONF.PARAM_ERR_MSG + " location参数格式有误");
+      c.fail(b);
+      c.complete(b);
+      return false;
+    }
+    return true;
+  },
+  buildErrorConfig: function buildErrorConfig(a, b) {
+    return {
+      status: a,
+      message: b
+    };
+  },
+  buildWxRequestConfig: function buildWxRequestConfig(c, a) {
+    var b = this;
+    a.header = {
+      "content-type": "application/json"
+    };
+    a.method = "GET";
+    a.success = function (d) {
+      var e = d.data;
+      if (e.status === 0) {
+        c.success(e);
+      } else {
+        c.fail(e);
+      }
+    };
+    a.fail = function (d) {
+      d.statusCode = ERROR_CONF.WX_ERR_CODE;
+      c.fail(b.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, result.errMsg));
+    };
+    a.complete = function (d) {
+      var e = +d.statusCode;
+      switch (e) {
+        case ERROR_CONF.WX_ERR_CODE:
+          c.complete(b.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, d.errMsg));
+          break;
+        case ERROR_CONF.WX_OK_CODE:
+          var f = d.data;
+          if (f.status === 0) {
+            c.complete(f);
+          } else {
+            c.complete(b.buildErrorConfig(f.status, f.message));
+          }
+          break;
+        default:
+          c.complete(b.buildErrorConfig(ERROR_CONF.SYSTEM_ERR, ERROR_CONF.SYSTEM_ERR_MSG));
+      }
+    };
+    return a;
+  },
+  locationProcess: function locationProcess(f, e, c, a) {
+    var d = this;
+    c = c || function (g) {
+      g.statusCode = ERROR_CONF.WX_ERR_CODE;
+      f.fail(d.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, g.errMsg));
+    };
+    a = a || function (g) {
+      if (g.statusCode == ERROR_CONF.WX_ERR_CODE) {
+        f.complete(d.buildErrorConfig(ERROR_CONF.WX_ERR_CODE, g.errMsg));
+      }
+    };
+    if (!f.location) {
+      d.getWXLocation(e, c, a);
+    } else {
+      if (d.checkLocation(f)) {
+        var b = Utils.getLocationParam(f.location);
+        e(b);
+      }
+    }
+  }
+};
+var QQMapWX = function () {
+  function b(i) {
+    _classCallCheck(this, b);
+    if (!i.key) {
+      throw Error("key值不能为空");
+    }
+    this.key = i.key;
+  }
+  _createClass(b, [{
+    key: "search",
+    value: function f(i) {
+      var l = this;
+      i = i || {};
+      Utils.polyfillParam(i);
+      if (!Utils.checkKeyword(i)) {
+        return;
+      }
+      var k = {
+        keyword: i.keyword,
+        orderby: i.orderby || "_distance",
+        page_size: i.page_size || 10,
+        page_index: i.page_index || 1,
+        output: "json",
+        key: l.key
+      };
+      if (i.address_format) {
+        k.address_format = i.address_format;
+      }
+      if (i.filter) {
+        k.filter = i.filter;
+      }
+      var n = i.distance || "1000";
+      var j = i.auto_extend || 1;
+      var m = function m(o) {
+        k.boundary = "nearby(" + o.latitude + "," + o.longitude + "," + n + "," + j + ")";
+        uni.request(Utils.buildWxRequestConfig(i, {
+          url: URL_SEARCH,
+          data: k
+        }));
+      };
+      Utils.locationProcess(i, m);
+    }
+  }, {
+    key: "getSuggestion",
+    value: function h(i) {
+      var k = this;
+      i = i || {};
+      Utils.polyfillParam(i);
+      if (!Utils.checkKeyword(i)) {
+        return;
+      }
+      var j = {
+        keyword: i.keyword,
+        region: i.region || "全国",
+        region_fix: i.region_fix || 0,
+        policy: i.policy || 0,
+        output: "json",
+        key: k.key
+      };
+      uni.request(Utils.buildWxRequestConfig(i, {
+        url: URL_SUGGESTION,
+        data: j
+      }));
+    }
+  }, {
+    key: "reverseGeocoder",
+    value: function a(i) {
+      var k = this;
+      i = i || {};
+      Utils.polyfillParam(i);
+      var j = {
+        coord_type: i.coord_type || 5,
+        get_poi: i.get_poi || 0,
+        output: "json",
+        key: k.key
+      };
+      if (i.poi_options) {
+        j.poi_options = i.poi_options;
+      }
+      var l = function l(m) {
+        j.location = m.latitude + "," + m.longitude;
+        uni.request(Utils.buildWxRequestConfig(i, {
+          url: URL_GET_GEOCODER,
+          data: j
+        }));
+      };
+      Utils.locationProcess(i, l);
+    }
+  }, {
+    key: "geocoder",
+    value: function g(i) {
+      var k = this;
+      i = i || {};
+      Utils.polyfillParam(i);
+      if (Utils.checkParamKeyEmpty(i, "address")) {
+        return;
+      }
+      var j = {
+        address: i.address,
+        output: "json",
+        key: k.key
+      };
+      uni.request(Utils.buildWxRequestConfig(i, {
+        url: URL_GET_GEOCODER,
+        data: j
+      }));
+    }
+  }, {
+    key: "getCityList",
+    value: function c(i) {
+      var k = this;
+      i = i || {};
+      Utils.polyfillParam(i);
+      var j = {
+        output: "json",
+        key: k.key
+      };
+      uni.request(Utils.buildWxRequestConfig(i, {
+        url: URL_CITY_LIST,
+        data: j
+      }));
+    }
+  }, {
+    key: "getDistrictByCityId",
+    value: function d(i) {
+      var k = this;
+      i = i || {};
+      Utils.polyfillParam(i);
+      if (Utils.checkParamKeyEmpty(i, "id")) {
+        return;
+      }
+      var j = {
+        id: i.id || "",
+        output: "json",
+        key: k.key
+      };
+      uni.request(Utils.buildWxRequestConfig(i, {
+        url: URL_AREA_LIST,
+        data: j
+      }));
+    }
+  }, {
+    key: "calculateDistance",
+    value: function e(i) {
+      var k = this;
+      i = i || {};
+      Utils.polyfillParam(i);
+      if (Utils.checkParamKeyEmpty(i, "to")) {
+        return;
+      }
+      var j = {
+        mode: i.mode || "walking",
+        to: Utils.location2query(i.to),
+        output: "json",
+        key: k.key
+      };
+      var l = function l(m) {
+        j.from = m.latitude + "," + m.longitude;
+        uni.request(Utils.buildWxRequestConfig(i, {
+          url: URL_DISTANCE,
+          data: j
+        }));
+      };
+      if (i.from) {
+        i.location = i.from;
+      }
+      Utils.locationProcess(i, l);
+    }
+  }]);
+  return b;
+}();
+module.exports = QQMapWX;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 31 */,
-/* 32 */
+/* 32 */,
+/* 33 */
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
@@ -9622,27 +9982,1216 @@ function normalizeComponent (
 
 
 /***/ }),
-/* 33 */
+/* 34 */
+/*!**************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/index.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _pageLifetimes = __webpack_require__(/*! ./lifecycle/pageLifetimes */ 35);
+var _clone = __webpack_require__(/*! ./methods/clone */ 36);
+var _dataset = __webpack_require__(/*! ./methods/dataset */ 37);
+var _escape = __webpack_require__(/*! ./methods/escape */ 38);
+var _event = __webpack_require__(/*! ./methods/event */ 39);
+var _getTabBar = __webpack_require__(/*! ./methods/getTabBar */ 40);
+var _relation = __webpack_require__(/*! ./methods/relation */ 41);
+var _selectComponent = __webpack_require__(/*! ./methods/selectComponent */ 42);
+var _setData = __webpack_require__(/*! ./methods/setData */ 43);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var _default = {
+  install: function install(Vue, option) {
+    Vue.mixin(_objectSpread(_objectSpread({}, _pageLifetimes.pageLifetimes), {}, {
+      methods: {
+        clone: _clone.clone,
+        handleDataset: _dataset.handleDataset,
+        escape2Html: _escape.escape2Html,
+        html2Escape: _escape.html2Escape,
+        parseEventDynamicCode: _event.parseEventDynamicCode,
+        getTabBar: _getTabBar.getTabBar,
+        getRelationNodes: _relation.getRelationNodes,
+        zpSelectComponent: _selectComponent.selectComponent,
+        zpSelectAllComponents: _selectComponent.selectAllComponents,
+        setData: _setData.setData
+      }
+    }));
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 35 */
+/*!********************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/lifecycle/pageLifetimes.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.pageLifetimes = void 0;
+/**
+ * 组件pageLifetimes处理，需在页面生命周期里调用
+ * @param {Object} node
+ * @param {Object} lifeName
+ */
+function handlePageLifetime(node, lifeName) {
+  node.$children.map(function (child) {
+    if (typeof child[lifeName] == 'function') child[lifeName]();
+    handlePageLifetime(child, lifeName);
+  });
+}
+var pageLifetimes = {
+  onLoad: function onLoad() {
+    var _this = this;
+    uni.onWindowResize(function (res) {
+      handlePageLifetime(_this, "handlePageResize");
+    });
+  },
+  onShow: function onShow() {
+    handlePageLifetime(this, "handlePageShow");
+  },
+  onHide: function onHide() {
+    handlePageLifetime(this, "handlePageHide");
+  },
+  onResize: function onResize() {}
+};
+exports.pageLifetimes = pageLifetimes;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 36 */
+/*!**********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/clone.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.clone = clone;
+/**
+ * 用于处理对props进行赋值的情况
+ * //简单处理一下就行了
+ *
+ * @param {*} target
+ * @returns
+ */
+function clone(target) {
+  return JSON.parse(JSON.stringify(target));
+}
+
+/***/ }),
+/* 37 */
+/*!************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/dataset.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.handleDataset = handleDataset;
+/**
+ * 用于处理dataset
+ * 自定义组件的事件里，是获取不到e.currentTarget.dataset的
+ * 因此收集data-参数，手动传进去
+ *
+ * @param {*} event
+ * @param {*} dataSet
+ */
+function handleDataset(event) {
+  var dataSet = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  if (event && !event.currentTarget) {
+    if (dataSet.tagId) {
+      event.currentTarget = {
+        id: dataSet.tagId
+      };
+    } else {
+      event.currentTarget = {
+        dataset: dataSet
+      };
+    }
+  }
+}
+
+/***/ }),
+/* 38 */
+/*!***********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/escape.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.escape2Html = escape2Html;
+exports.html2Escape = html2Escape;
+/**
+ * 转义符换成普通字符
+ * @param {*} str
+ * @returns
+ */
+function escape2Html(str) {
+  if (!str) return str;
+  var arrEntities = {
+    'lt': '<',
+    'gt': '>',
+    'nbsp': ' ',
+    'amp': '&',
+    'quot': '"'
+  };
+  return str.replace(/&(lt|gt|nbsp|amp|quot);/ig, function (all, t) {
+    return arrEntities[t];
+  });
+}
+
+/**
+ * 普通字符转换成转义符
+ * @param {*} sHtml
+ * @returns
+ */
+function html2Escape(sHtml) {
+  if (!sHtml) return sHtml;
+  return sHtml.replace(/[<>&"]/g, function (c) {
+    return {
+      '<': '&lt;',
+      '>': '&gt;',
+      '&': '&amp;',
+      '"': '&quot;'
+    }[c];
+  });
+}
+
+/***/ }),
+/* 39 */
+/*!**********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/event.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.parseEventDynamicCode = parseEventDynamicCode;
+/**
+ * 解析事件里的动态函数名，这种没有()的函数名，在uniapp不被执行
+ * 比如：<view bindtap="{{openId==undefined?'denglu':'hy_to'}}">立即</view>
+ * @param {*} exp
+ */
+function parseEventDynamicCode(e, exp) {
+  if (typeof this[exp] === 'function') {
+    this[exp](e);
+  }
+}
+
+/***/ }),
+/* 40 */
 /*!**************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni.promisify.adaptor.js ***!
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/getTabBar.js ***!
   \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(uni) {var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-uni.addInterceptor({
-  returnValue: function returnValue(res) {
-    if (!(!!res && (_typeof(res) === "object" || typeof res === "function") && typeof res.then === "function")) {
-      return res;
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getTabBar = getTabBar;
+/**
+ * 接管getTabBar函数，默认uni-app是没有这个函数的
+ * 适用于使用custom-tab-bar自定义导航栏的小程序项目
+ * 需注意：
+ * 1.custom-tab-bar下面仍是小程序文件
+ * 2.pages.json里面需使用条件编译区分好小程序和非小程序的tabBar配置
+ */
+function getTabBar() {
+  return {
+    setData: function setData(obj) {
+      var _this$$mp, _this$$mp$page, _this$$mp2, _this$$mp2$page;
+      if (typeof ((_this$$mp = this.$mp) === null || _this$$mp === void 0 ? void 0 : (_this$$mp$page = _this$$mp.page) === null || _this$$mp$page === void 0 ? void 0 : _this$$mp$page.getTabBar) === 'function' && (_this$$mp2 = this.$mp) !== null && _this$$mp2 !== void 0 && (_this$$mp2$page = _this$$mp2.page) !== null && _this$$mp2$page !== void 0 && _this$$mp2$page.getTabBar()) {
+        this.$mp.page.getTabBar().setData(obj);
+      } else {
+        console.log("当前平台不支持getTabBar()，已稍作处理，详细请参见相关文档。");
+      }
     }
-    return new Promise(function (resolve, reject) {
-      res.then(function (res) {
-        return res[0] ? reject(res[0]) : resolve(res[1]);
+  };
+}
+
+/***/ }),
+/* 41 */
+/*!*************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/relation.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getRelationNodes = getRelationNodes;
+/**
+ * 组件间关系
+ * 注意：须与p-f-unicom配合使用！！！
+ * @param {*} name
+ * @returns
+ */
+function getRelationNodes(name) {
+  if (!this.$unicom) throw "this.getRelationNodes()需与p-f-unicom配合使用！";
+  return this.$unicom('@' + name);
+}
+
+/***/ }),
+/* 42 */
+/*!********************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/selectComponent.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.selectAllComponents = selectAllComponents;
+exports.selectComponent = selectComponent;
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+var createTraverse = function createTraverse() {
+  var stop = false;
+  return function traverse(root, callback) {
+    if (!stop && typeof callback === 'function') {
+      var children = root.$children;
+      for (var index = 0; !stop && index < children.length; index++) {
+        var element = children[index];
+        stop = callback(element) === true;
+        traverse(element, callback);
+      }
+    }
+  };
+};
+
+/**
+ * 安全的JSON.stringify
+ * @param {Object} node
+ */
+function safeStringify(node) {
+  var cache = [];
+  var str = JSON.stringify(node, function (key, value) {
+    if ((0, _typeof2.default)(value) === 'object' && value !== null) {
+      if (cache.indexOf(value) !== -1) {
+        // 移除
+        return;
+      }
+      // 收集所有的值
+      cache.push(value);
+    }
+    return value;
+  });
+  cache = null; // 清空变量，便于垃圾回收机制回收
+  return str;
+}
+var match = function match(node, selector) {
+  var _vnode$context$$vnode, _vnode, _vnode$context;
+  var vnode = node._vnode;
+
+  //好家伙，在微信小程序里，node里面根本找不到class，因此这种方式没法搞了
+
+  //关键之处！
+  // console.log("attrs", (vnode.context.$vnode.data));
+  vnode = (_vnode$context$$vnode = (_vnode = vnode) === null || _vnode === void 0 ? void 0 : (_vnode$context = _vnode.context) === null || _vnode$context === void 0 ? void 0 : _vnode$context.$vnode) !== null && _vnode$context$$vnode !== void 0 ? _vnode$context$$vnode : "";
+  //console.log(vnode.data) -->  [Object] {"staticClass":"bar","attrs":{"_i":0}}  at selectComponent.js:72
+  if (!vnode || !vnode.data) {
+    return false;
+  }
+  var attrs = vnode.data.attrs || {};
+  var staticClass = vnode.data.staticClass || '';
+  var id = attrs.id || '';
+  if (selector[0] === '#') {
+    return selector.substr(1) === id;
+  } else {
+    staticClass = staticClass.trim().split(' ');
+    selector = selector.substr(1).split('.');
+    return selector.reduce(function (a, c) {
+      return a && staticClass.includes(c);
+    }, true);
+  }
+};
+var selectorBuilder = function selectorBuilder(selector) {
+  selector = selector.replace(/>>>/g, '>');
+  selector = selector.split('>').map(function (s) {
+    return s.trim().split(' ').join("').descendant('");
+  }).join("').child('");
+
+  // 替换掉new Function方式，因为小程序不支持new Function和eval
+  //return new Function('Selector', 'node', 'all', `return new Selector(node, all).descendant('` + selector + `')`);
+  return function (Selector, node, all) {
+    return new Selector(node, all).descendant(selector);
+  };
+};
+var Selector = /*#__PURE__*/function () {
+  function Selector(node) {
+    var all = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    (0, _classCallCheck2.default)(this, Selector);
+    this.nodes = [node];
+    this.all = all;
+  }
+  (0, _createClass2.default)(Selector, [{
+    key: "child",
+    value: function child(selector) {
+      var matches = [];
+      if (this.all) {
+        this.nodes.forEach(function (node) {
+          var _matches;
+          (_matches = matches).push.apply(_matches, (0, _toConsumableArray2.default)(node.$children.filter(function (node) {
+            return match(node, selector);
+          })));
+        });
+      } else {
+        if (this.nodes.length > 0) {
+          var node = this.nodes[0].$children.find(function (node) {
+            return match(node, selector);
+          });
+          matches = node ? [node] : [];
+        }
+      }
+      this.nodes = matches;
+      return this;
+    }
+  }, {
+    key: "descendant",
+    value: function descendant(selector) {
+      var _this = this;
+      var matches = [];
+      this.nodes.forEach(function (root) {
+        createTraverse()(root, function (node) {
+          if (match(node, selector)) {
+            matches.push(node);
+            return !_this.all;
+          }
+        });
+      });
+      this.nodes = matches;
+      return this;
+    }
+  }]);
+  return Selector;
+}(); ////////////////////////////////////////////selectComponent//////////////////////////////////////////////////
+/**
+ * 其他平台，如APP
+ * @param {Object} selector
+ */
+function selectComponentOther(selector) {
+  var selectors = selector.split(',').map(function (s) {
+    return s.trim();
+  });
+  if (!selectors[0]) {
+    return null;
+  }
+  var querySelector = selectorBuilder(selectors[0]);
+  return querySelector(Selector, this, false, selector).nodes[0];
+}
+
+/**
+ * 还是用这个微信小程序的实现吧
+ * @param {Object} selector
+ */
+var selectComponentWeiXin2 = function selectComponentWeiXin2(selector) {
+  var _this$$scope$selectCo;
+  console.log(".$scope", this.$scope.selectComponent(selector));
+  return ((_this$$scope$selectCo = this.$scope.selectComponent(selector)) === null || _this$$scope$selectCo === void 0 ? void 0 : _this$$scope$selectCo.data) || undefined;
+};
+
+/**
+ * selectComponent
+ * @param {Object} args
+ */
+function selectComponent(args) {
+  // console.log(".$scope",this.$scope)
+
+  //H5和小程序能正常使用这个函数
+  //重写selectComponent函数，因为默认会多一层$vm
+  return selectComponentWeiXin2.call(this, args);
+}
+
+////////////////////////////////////////////selectAllComponents//////////////////////////////////////////////////
+/**
+ * 其他平台，如APP
+ * @param {Object} selector
+ */
+function selectAllComponentsOther(selector) {
+  var _this2 = this;
+  var selectors = selector.split(',').map(function (s) {
+    return s.trim();
+  });
+  var selected = [];
+  selectors.forEach(function (selector) {
+    var querySelector = selectorBuilder(selector);
+    selected = selected.concat(querySelector(Selector, _this2, true, selector).nodes);
+  });
+  return selected;
+}
+
+/**
+ * 还是用这个微信小程序的实现吧
+ * @param {Object} selector
+ */
+var selectAllComponentsWeiXin2 = function selectAllComponentsWeiXin2(selector) {
+  var list = this.$scope.selectAllComponents(selector) || [];
+  list = list.map(function (item) {
+    return item.data;
+  });
+  return list;
+};
+
+/**
+ * selectAllComponents
+ * @param {Object} args
+ */
+function selectAllComponents(args) {
+  //H5和小程序能正常使用这个函数
+  //重写selectComponent函数，因为默认会多一层$vm
+  return selectAllComponentsWeiXin2.call(this, args);
+}
+
+/***/ }),
+/* 43 */
+/*!************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/setData.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setData = setData;
+var _set2 = _interopRequireDefault(__webpack_require__(/*! ../utils/_set */ 44));
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ../utils/debounce */ 45));
+/**
+ * 老setData polyfill
+ * 用于转换后的uniapp的项目能直接使用this.setData()函数
+ * @param {*} obj
+ * @param {*} callback
+ */
+function oldSetData(obj, callback) {
+  var that = this;
+  var handleData = function handleData(tepData, tepKey, afterKey) {
+    var tepData2 = tepData;
+    tepKey = tepKey.split('.');
+    tepKey.forEach(function (item) {
+      if (tepData[item] === null || tepData[item] === undefined) {
+        var reg = /^[0-9]+$/;
+        tepData[item] = reg.test(afterKey) ? [] : {};
+        tepData2 = tepData[item];
+      } else {
+        tepData2 = tepData[item];
+      }
+    });
+    return tepData2;
+  };
+  var isFn = function isFn(value) {
+    return typeof value == 'function' || false;
+  };
+  Object.keys(obj).forEach(function (key) {
+    var val = obj[key];
+    key = key.replace(/\]/g, '').replace(/\[/g, '.');
+    var front, after;
+    var index_after = key.lastIndexOf('.');
+    if (index_after != -1) {
+      after = key.slice(index_after + 1);
+      front = handleData(that, key.slice(0, index_after), after);
+    } else {
+      after = key;
+      front = that;
+    }
+    if (front.$data && front.$data[after] === undefined) {
+      Object.defineProperty(front, after, {
+        get: function get() {
+          return front.$data[after];
+        },
+        set: function set(newValue) {
+          front.$data[after] = newValue;
+          that.hasOwnProperty("$forceUpdate") && that.$forceUpdate();
+        },
+        enumerable: true,
+        configurable: true
+      });
+      front[after] = val;
+    } else {
+      that.$set(front, after, val);
+    }
+  });
+  // this.$forceUpdate();
+  isFn(callback) && this.$nextTick(callback);
+}
+
+/**
+ * 变量名正则
+ */
+var variableNameReg = /^([^\x00-\xff]|[a-zA-Z_$])([^\x00-\xff]|[a-zA-Z0-9_$])*$/;
+
+/**
+ * 2022-10-31 重写setData
+ * 2023-05-08 增加微信“简易双向绑定”支持
+ * 用于转换后的uniapp的项目能直接使用this.setData()函数
+ * @param {Object} obj
+ * @param {Object} callback
+ */
+function setData(obj) {
+  var _this = this;
+  var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  Object.keys(obj).forEach(function (key) {
+    (0, _set2.default)(_this, key, obj[key]);
+
+    //处理微信“简易双向绑定”
+    if (variableNameReg.test(key) && key.endsWith("Clone")) {
+      var propName = key.replace(/Clone$/, "");
+      if (_this.$options.propsData[propName]) {
+        _this.$emit("update:".concat(propName), obj[key]);
+      }
+    }
+  });
+  (0, _debounce.default)(this, '$forceUpdate', 200);
+  if (typeof callback == 'function') this.$nextTick(callback);
+}
+
+/***/ }),
+/* 44 */
+/*!*******************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/utils/_set.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * lodash set
+ * @param {*} obj
+ * @param {*} path
+ * @param {*} value
+ * @returns
+ */
+function _set(obj, path, value) {
+  if (Object(obj) !== obj) return obj; // When obj is not an object
+  // If not yet an array, get the keys from the string-path
+  if (!Array.isArray(path)) path = path.toString().match(/[^.[\]]+/g) || [];
+  path.slice(0, -1).reduce(function (a, c, i) {
+    return (
+      // Iterate all of them except the last one
+      Object(a[c]) === a[c] // Does the key exist and is its value an object?
+      // Yes: then follow that path
+      ? a[c]
+      // No: create the key. Is the next key a potential array-index?
+      : a[c] = Math.abs(path[i + 1]) >> 0 === +path[i + 1] ? [] // Yes: assign a new array object
+      : {}
+    );
+  },
+  // No: assign a new plain object
+  obj)[path[path.length - 1]] = value; // Finally assign the value to the last key
+  return obj; // Return the top-level object to allow chaining
+}
+var _default = _set;
+exports.default = _default;
+
+/***/ }),
+/* 45 */
+/*!***********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/utils/debounce.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 防抖
+ * @param {Object} scope  //引用的this，发现不显式传this，拿不到。
+ * @param {Object} fn
+ * @param {Object} delay
+ */
+var t = null;
+var debounce = function debounce(scope, fn, delay) {
+  if (t !== null) {
+    clearTimeout(t);
+  }
+  t = setTimeout(function () {
+    scope[fn]();
+  }, delay);
+};
+var _default = debounce;
+exports.default = _default;
+
+/***/ }),
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// TODO(Babel 8): Remove this file.
+
+var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 53)();
+module.exports = runtime;
+
+/***/ }),
+/* 53 */
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+function _regeneratorRuntime() {
+  "use strict";
+
+  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
+    return exports;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  var exports = {},
+    Op = Object.prototype,
+    hasOwn = Op.hasOwnProperty,
+    defineProperty = Object.defineProperty || function (obj, key, desc) {
+      obj[key] = desc.value;
+    },
+    $Symbol = "function" == typeof Symbol ? Symbol : {},
+    iteratorSymbol = $Symbol.iterator || "@@iterator",
+    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+  function define(obj, key, value) {
+    return Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    }), obj[key];
+  }
+  try {
+    define({}, "");
+  } catch (err) {
+    define = function define(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
+      generator = Object.create(protoGenerator.prototype),
+      context = new Context(tryLocsList || []);
+    return defineProperty(generator, "_invoke", {
+      value: makeInvokeMethod(innerFn, self, context)
+    }), generator;
+  }
+  function tryCatch(fn, obj, arg) {
+    try {
+      return {
+        type: "normal",
+        arg: fn.call(obj, arg)
+      };
+    } catch (err) {
+      return {
+        type: "throw",
+        arg: err
+      };
+    }
+  }
+  exports.wrap = wrap;
+  var ContinueSentinel = {};
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+  var getProto = Object.getPrototypeOf,
+    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
+  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function (method) {
+      define(prototype, method, function (arg) {
+        return this._invoke(method, arg);
       });
     });
   }
-});
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if ("throw" !== record.type) {
+        var result = record.arg,
+          value = result.value;
+        return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
+          invoke("next", value, resolve, reject);
+        }, function (err) {
+          invoke("throw", err, resolve, reject);
+        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
+          result.value = unwrapped, resolve(result);
+        }, function (error) {
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+      reject(record.arg);
+    }
+    var previousPromise;
+    defineProperty(this, "_invoke", {
+      value: function value(method, arg) {
+        function callInvokeWithMethodAndArg() {
+          return new PromiseImpl(function (resolve, reject) {
+            invoke(method, arg, resolve, reject);
+          });
+        }
+        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+      }
+    });
+  }
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = "suspendedStart";
+    return function (method, arg) {
+      if ("executing" === state) throw new Error("Generator is already running");
+      if ("completed" === state) {
+        if ("throw" === method) throw arg;
+        return doneResult();
+      }
+      for (context.method = method, context.arg = arg;;) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+          if ("suspendedStart" === state) throw state = "completed", context.arg;
+          context.dispatchException(context.arg);
+        } else "return" === context.method && context.abrupt("return", context.arg);
+        state = "executing";
+        var record = tryCatch(innerFn, self, context);
+        if ("normal" === record.type) {
+          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        }
+        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+      }
+    };
+  }
+  function maybeInvokeDelegate(delegate, context) {
+    var methodName = context.method,
+      method = delegate.iterator[methodName];
+    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
+    var record = tryCatch(method, delegate.iterator, context.arg);
+    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
+    var info = record.arg;
+    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+  }
+  function pushTryEntry(locs) {
+    var entry = {
+      tryLoc: locs[0]
+    };
+    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+  }
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal", delete record.arg, entry.completion = record;
+  }
+  function Context(tryLocsList) {
+    this.tryEntries = [{
+      tryLoc: "root"
+    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+  }
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) return iteratorMethod.call(iterable);
+      if ("function" == typeof iterable.next) return iterable;
+      if (!isNaN(iterable.length)) {
+        var i = -1,
+          next = function next() {
+            for (; ++i < iterable.length;) {
+              if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+            }
+            return next.value = undefined, next.done = !0, next;
+          };
+        return next.next = next;
+      }
+    }
+    return {
+      next: doneResult
+    };
+  }
+  function doneResult() {
+    return {
+      value: undefined,
+      done: !0
+    };
+  }
+  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+    value: GeneratorFunctionPrototype,
+    configurable: !0
+  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+    value: GeneratorFunction,
+    configurable: !0
+  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+    var ctor = "function" == typeof genFun && genFun.constructor;
+    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
+  }, exports.mark = function (genFun) {
+    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
+  }, exports.awrap = function (arg) {
+    return {
+      __await: arg
+    };
+  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    void 0 === PromiseImpl && (PromiseImpl = Promise);
+    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+      return result.done ? result.value : iter.next();
+    });
+  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+    return this;
+  }), define(Gp, "toString", function () {
+    return "[object Generator]";
+  }), exports.keys = function (val) {
+    var object = Object(val),
+      keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    return keys.reverse(), function next() {
+      for (; keys.length;) {
+        var key = keys.pop();
+        if (key in object) return next.value = key, next.done = !1, next;
+      }
+      return next.done = !0, next;
+    };
+  }, exports.values = values, Context.prototype = {
+    constructor: Context,
+    reset: function reset(skipTempReset) {
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
+        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
+      }
+    },
+    stop: function stop() {
+      this.done = !0;
+      var rootRecord = this.tryEntries[0].completion;
+      if ("throw" === rootRecord.type) throw rootRecord.arg;
+      return this.rval;
+    },
+    dispatchException: function dispatchException(exception) {
+      if (this.done) throw exception;
+      var context = this;
+      function handle(loc, caught) {
+        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+      }
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i],
+          record = entry.completion;
+        if ("root" === entry.tryLoc) return handle("end");
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc"),
+            hasFinally = hasOwn.call(entry, "finallyLoc");
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+          } else {
+            if (!hasFinally) throw new Error("try statement without catch or finally");
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          }
+        }
+      }
+    },
+    abrupt: function abrupt(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
+      var record = finallyEntry ? finallyEntry.completion : {};
+      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+    },
+    complete: function complete(record, afterLoc) {
+      if ("throw" === record.type) throw record.arg;
+      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+    },
+    finish: function finish(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+      }
+    },
+    "catch": function _catch(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if ("throw" === record.type) {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+      throw new Error("illegal catch attempt");
+    },
+    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+      return this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+    }
+  }, exports;
+}
+module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+/* 54 */
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+      args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+      _next(undefined);
+    });
+  };
+}
+module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+/* 55 */
+/*!************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/utils/request.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {var _defineProperty = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var baseUrl = 'https://m.maoyan.com';
+function request(params) {
+  var url = params.url;
+  if (params.api) {
+    url = "".concat(baseUrl).concat(params.api);
+  }
+  return new Promise(function (resolve, reject) {
+    uni.request(_objectSpread(_objectSpread({}, params), {}, {
+      url: url,
+      success: function success(res) {
+        if (typeof res === 'string') {
+          reject([{}, err]);
+        } else {
+          resolve([res.data || {}, null]);
+        }
+      },
+      fail: function fail(err) {
+        reject([{}, err]);
+      }
+    }));
+  }).catch(function (err) {
+    return [{}, err];
+  });
+}
+module.exports = request;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */
+/*!*********************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/utils/util.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var formatTime = function formatTime(date) {
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+  var hour = date.getHours();
+  var minute = date.getMinutes();
+  var second = date.getSeconds();
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':');
+};
+var formatNumber = function formatNumber(n) {
+  n = n.toString();
+  return n[1] ? n : '0' + n;
+};
+var getToday = function getToday() {
+  var today = new Date();
+  return formatTime(new Date()).split(' ')[0];
+};
+var calcTime = function calcTime(time) {
+  if (!time) {
+    return;
+  }
+  var day = new Date(time);
+  var now = new Date();
+  var result = now.getTime() - day.getTime();
+  if (now.getFullYear() !== day.getFullYear()) {
+    return time.split(' ')[0];
+  }
+  //一分钟前评论
+  if (result < 60000) {
+    return '刚刚';
+  }
+  if (60000 <= result && result < 3600000) {
+    return "".concat(Math.floor(result / 60000), "\u5206\u949F\u524D");
+  }
+  if (3600000 <= result && result < 86400000) {
+    return "".concat(Math.floor(result / 3600000), "\u5C0F\u65F6\u524D");
+  }
+  if (86400000 <= result && result < 604800000) {
+    return "".concat(Math.floor(result / 86400000), "\u5929\u524D");
+  }
+  return "".concat(formatNumber(day.getMonth() + 1), "-").concat(formatNumber(day.getDate()));
+};
+
+//获取指定区间的随机整数
+var getRandom = function getRandom(lowerValue, upperValue, isFormat) {
+  var num = Math.floor(Math.random() * (upperValue - lowerValue + 1) + lowerValue);
+  if (isFormat) {
+    return formatNumber(num);
+  } else {
+    return num;
+  }
+};
+//节流函数
+var throttle = function throttle(func) {
+  var interval = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
+  var timeout;
+  var startTime = new Date();
+  return function (event) {
+    var _this = this;
+    clearTimeout(timeout);
+    var curTime = new Date();
+    if (curTime - startTime <= interval) {
+      //小于规定时间间隔时，用setTimeout在指定时间后再执行
+      timeout = setTimeout(function () {
+        func.call(_this, event);
+      }, interval);
+    } else {
+      //重新计时并执行函数
+      startTime = curTime;
+      func.call(this, event);
+    }
+  };
+};
+module.exports = {
+  formatTime: formatTime,
+  formatNumber: formatNumber,
+  getToday: getToday,
+  calcTime: calcTime,
+  getRandom: getRandom,
+  throttle: throttle
+};
 
 /***/ })
 ]]);

@@ -11,6 +11,7 @@
     "minified": false,
     "newFeature": true,
     "bigPackageSizeSupport": true,
+    "packNpmRelationList": [],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -20,8 +21,8 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.33.0",
-  "appid": "touristappid",
-  "projectname": "demo",
+  "appid": "wxa8389399ce2ff63f",
+  "projectname": "weapp-movie",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",

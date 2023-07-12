@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "影院",
+  "usingComponents": {
+    "select-movie": "/components/select-movie/select-movie",
+    "select-time": "/components/select-time/select-time",
+    "cinema-map": "/templates/cinemaMap/cinemaMap"
+  }
+}
