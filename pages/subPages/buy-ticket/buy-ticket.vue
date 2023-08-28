@@ -1,5 +1,5 @@
 <template>
-    <view class="container" v-if="order">
+    <view class="container" >
         <view class="section">
             <view class="movie-box">
                 <view class="movie-name">{{ order.movieName }}</view>
@@ -55,13 +55,15 @@ export default {
         };
     },
     onLoad(params){
-        const paramsObj = JSON.parse(params.paramsStr)
+		console.log(params.paramsStr)
+		const paramsJson=JSON.stringify(params.paramsStr)
+        const paramsObj = JSON.parse(paramsJson)
         this.initData(paramsObj)
       },
     methods: {
         initData(params) {
             this.setData({
-                order: params
+            order: params
             });
         },
         //模拟支付

@@ -13,9 +13,7 @@
 export default {
     props: ['data', 'compName'],
     computed: {
-        message() {
-            return this.data.message;
-        }
+       
     }
 };
 </script>

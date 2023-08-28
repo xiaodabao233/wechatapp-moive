@@ -60,7 +60,7 @@ export default {
     methods: {
         initData(order) {
             this.setData({
-                order
+                order:order
             });
         }
     }

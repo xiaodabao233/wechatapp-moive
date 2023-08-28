@@ -291,7 +291,6 @@
 
 
 
-
 /* @import "../../../templates/movieSection/movieSection.css"; */
 .switch-hot {
 	display: flex;

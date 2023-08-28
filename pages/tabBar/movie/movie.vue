@@ -140,7 +140,6 @@
 		},
 		methods: {
 			initPage() {
-				//https://www.jianshu.com/p/aaf65625fc9d   解释的很好
 				if (app.globalData.userLocation) {
 					this.setData({
 						city: app.globalData.selectCity ? app.globalData.selectCity.cityName : '定位失败'
@@ -313,6 +312,7 @@
 		color: #ef4238;
 		border-bottom: 2px solid #ef4238;
 	}
+
 	.search-entry {
 		color: #ef4238;
 		font-weight: 700;
@@ -320,46 +320,55 @@
 		line-height: 90rpx;
 		padding: 0 30rpx;
 	}
+
 	.search-entry .iconfont {
 		font-size: 36rpx;
 	}
+
 	/* switch-content */
 	.switch-content {
 		padding-bottom: 30rpx;
 	}
+
 	.title {
 		padding: 0 30rpx;
 		padding-top: 20rpx;
 		font-size: 28rpx;
 		color: #333;
 	}
+
 	.most-expected {
 		position: relative;
 		padding: 0 30rpx;
 		padding-bottom: 20rpx;
 		border-bottom: 20rpx solid #f5f5f5;
 	}
+
 	.most-expected .title {
 		padding-left: 0;
 		margin-bottom: 20rpx;
 	}
+
 	.expected-item {
 		display: inline-block;
 		width: 170rpx;
 		overflow: hidden;
 		margin-right: 20rpx;
 	}
+
 	.poster {
 		position: relative;
 		width: 170rpx;
 		height: 230rpx;
 		margin-bottom: 12rpx;
 	}
+
 	.name {
 		margin-bottom: 3px;
 		font-size: 24rpx;
 		color: #333;
 	}
+
 	.data {
 		font-size: 24rpx;
 		color: #999;
