@@ -55,9 +55,9 @@ export default {
         };
     },
     onLoad(params){
-		console.log(params.paramsStr)
-		const paramsJson=JSON.stringify(params.paramsStr)
-        const paramsObj = JSON.parse(paramsJson)
+		// console.log(params.paramsStr)
+		// const paramsJson=JSON.stringify(params.paramsStr)
+        const paramsObj = JSON.parse(decodeURIComponent(params.paramsStr))
         this.initData(paramsObj)
       },
     methods: {

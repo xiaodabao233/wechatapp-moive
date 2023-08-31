@@ -257,7 +257,7 @@ export default {
             });
 
             uni.navigateTo({
-                url: `../video-page/video-page?paramsStr=${paramsStr}`
+                url: `../video-page/video-page?paramsStr=${encodeURIComponent(paramsStr)}`
             });
         }
     }

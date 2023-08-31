@@ -256,14 +256,14 @@ export default {
                         });
                         if (res.confirm) {
                             uni.navigateTo({
-                                url: `/pages/subPages/buy-ticket/buy-ticket?paramsStr=${paramsStr}`
+                                url: `/pages/subPages/buy-ticket/buy-ticket?paramsStr=${encodeURIComponent(paramsStr)}`
                             });
                         }
                     }
                 });
             } else {
                 uni.navigateTo({
-                    url: `/pages/subPages/buy-ticket/buy-ticket?paramsStr=${paramsStr}`
+                    url: `/pages/subPages/buy-ticket/buy-ticket?paramsStr=${encodeURIComponent(paramsStr)}`
                 });
             }
         },
