@@ -24,7 +24,8 @@ export default {
          */
         startTime: {
             type: String,
-            default: util.getToday()
+            // default: util.getToday()
+			default:util.getToday()
         },
         /**
          * 默认选择的天数
@@ -38,7 +39,7 @@ export default {
          */
         days: {
             type: Array,
-            default: null
+            default: ''
         }
     },
     mounted() {
@@ -48,8 +49,12 @@ export default {
     methods: {
         attached() {
             //如果没有传递日期列表，就模拟一个日期列表
+			console.log(this.days)
             if (!this.days) {
+				console.log('如果没有传递日期列表，就模拟一个日期列表')
+				console.log(this.startTime)
                 this.getWeek(this.startTime);
+				console.log(util.getToday())
             }
         },
 
@@ -66,6 +71,7 @@ export default {
             }
             for (let i = 0; i < 7; i++) {
                 let day = new Date(start);
+				console.log(day.getDate())
                 day.setDate(day.getDate() + i); //往后推几天
                 const num = (day - new Date(util.getToday())) / (3600000 * 24); //计算相隔几天，减少必须是“今天”0时0分
                 days.push({
@@ -73,15 +79,17 @@ export default {
                     //获取类似 “后天9月1日” 的字符串
                     day: util.formatTime(day).split(' ')[0]
                 });
+				console.log(days)
             }
             this.setData(
                 {
                     daysClone: days
                 },
-                () => {
-                    this.selectDayFun();
-                }
+                // () => {
+                //    this.selectDayFun() ;
+                // }
             );
+			console.log(this.daysClone)
         },
 
         selectDayFun(e) {
@@ -100,6 +108,7 @@ export default {
         },
 
         findDefaultDay() {
+			console.log(this.days)
             const day = this.days.find((item) => item.day === this.defaultSelect);
             return day && day.day;
         }
