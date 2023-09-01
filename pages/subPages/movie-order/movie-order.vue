@@ -75,7 +75,7 @@
 				const order = e.currentTarget.dataset.order;
 				const paramsStr = JSON.stringify(order);
 				uni.navigateTo({
-					url: `../movie-order-detail/movie-order-detail?paramsStr=${paramsStr}`
+					url: `../movie-order-detail/movie-order-detail?paramsStr=${encodeURIComponent(paramsStr)}`
 				});
 			}
 		}

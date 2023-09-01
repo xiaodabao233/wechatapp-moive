@@ -780,8 +780,8 @@ function populateParameters(result) {
     appVersion: "1.0.0",
     appVersionCode: "100",
     appLanguage: getAppLanguage(hostLanguage),
-    uniCompileVersion: "3.8.7",
-    uniRuntimeVersion: "3.8.7",
+    uniCompileVersion: "3.8.12",
+    uniRuntimeVersion: "3.8.12",
     uniPlatform: undefined || "mp-weixin",
     deviceBrand: deviceBrand,
     deviceModel: model,
@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8934,7 +8934,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8955,14 +8955,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9058,7 +9058,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"weapp-movie","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9477,9 +9477,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 26 */
-/*!************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/pages.json ***!
-  \************************************************************************/
+/*!******************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/pages.json ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9490,9 +9490,9 @@ internalMixin(Vue);
 /* 28 */,
 /* 29 */,
 /* 30 */
-/*!***********************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/assets/libs/qqmap-wx-jssdk.min.js ***!
-  \***********************************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/assets/libs/qqmap-wx-jssdk.min.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9983,9 +9983,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 34 */
-/*!********************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/index.js ***!
-  \********************************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/index.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10031,9 +10031,9 @@ exports.default = _default;
 
 /***/ }),
 /* 35 */
-/*!**************************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/lifecycle/pageLifetimes.js ***!
-  \**************************************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/lifecycle/pageLifetimes.js ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10075,9 +10075,9 @@ exports.pageLifetimes = pageLifetimes;
 
 /***/ }),
 /* 36 */
-/*!****************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/clone.js ***!
-  \****************************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/clone.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10101,9 +10101,9 @@ function clone(target) {
 
 /***/ }),
 /* 37 */
-/*!******************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/dataset.js ***!
-  \******************************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/dataset.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10139,9 +10139,9 @@ function handleDataset(event) {
 
 /***/ }),
 /* 38 */
-/*!*****************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/escape.js ***!
-  \*****************************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/escape.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10191,9 +10191,9 @@ function html2Escape(sHtml) {
 
 /***/ }),
 /* 39 */
-/*!****************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/event.js ***!
-  \****************************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/event.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10217,9 +10217,9 @@ function parseEventDynamicCode(e, exp) {
 
 /***/ }),
 /* 40 */
-/*!********************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/getTabBar.js ***!
-  \********************************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/getTabBar.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10252,9 +10252,9 @@ function getTabBar() {
 
 /***/ }),
 /* 41 */
-/*!*******************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/relation.js ***!
-  \*******************************************************************************************************/
+/*!*************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/relation.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10278,9 +10278,9 @@ function getRelationNodes(name) {
 
 /***/ }),
 /* 42 */
-/*!**************************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/selectComponent.js ***!
-  \**************************************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/selectComponent.js ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10496,9 +10496,9 @@ function selectAllComponents(args) {
 
 /***/ }),
 /* 43 */
-/*!******************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/methods/setData.js ***!
-  \******************************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/methods/setData.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10602,9 +10602,9 @@ function setData(obj) {
 
 /***/ }),
 /* 44 */
-/*!*************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/utils/_set.js ***!
-  \*************************************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/utils/_set.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10646,9 +10646,9 @@ exports.default = _default;
 
 /***/ }),
 /* 45 */
-/*!*****************************************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/uni_modules/zp-mixins/utils/debounce.js ***!
-  \*****************************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/uni_modules/zp-mixins/utils/debounce.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11059,9 +11059,9 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 
 /***/ }),
 /* 55 */
-/*!******************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/utils/request.js ***!
-  \******************************************************************************/
+/*!************************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/utils/request.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11105,9 +11105,9 @@ module.exports = request;
 /* 62 */,
 /* 63 */,
 /* 64 */
-/*!***************************************************************************!*\
-  !*** /Users/wenye/Documents/WeChatProjects/wechatapp-moive/utils/util.js ***!
-  \***************************************************************************/
+/*!*********************************************************!*\
+  !*** D:/workspace/wechat/wechatapp-moive/utils/util.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

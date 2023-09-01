@@ -54,7 +54,7 @@ export default {
         };
     },
     onLoad(opt) {
-        const paramsObj = JSON.parse(opt.paramsStr);
+        const paramsObj = JSON.parse(decodeURIComponent(opt.paramsStr));
         this.initData(paramsObj);
     },
     methods: {
