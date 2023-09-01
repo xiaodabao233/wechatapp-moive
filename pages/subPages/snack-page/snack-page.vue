@@ -105,8 +105,9 @@ export default {
         };
     },
     onLoad(obj) {
-        const paramsObj = JSON.parse(obj.paramsStr);
+        const paramsObj = JSON.parse(decodeURIComponent(obj.paramsStr));
         this.initPage(paramsObj);
+		console.log(paramsObj)
     },
     methods: {
         initPage(obj) {
@@ -119,8 +120,10 @@ export default {
                 cinemaId: obj.cinemaId
             };
             uni.request({
-                url: 'https://m.maoyan.com/deal/goods/price?_v_=yes&token=_Rpc-H8U5JCblI4hGuJyrBtkd1cAAAAAdQYAADhpD2UCdaExkvgi4bFJcnWhlfI6rc7ilxZE_SENva6l8EU_L8_hQE-hXUB7l21d1w',
-                method: 'POST',
+                url: 'https://m.maoyan.com/deal/goods/price?_v_=yes&token=AgGKJSyLBRY2K5CUWM_eEkZCGzXBDiH-6GdIPk_yiYNHxSN6O_GQye9x2QJJ346SrtOKTv4fP5Pw_gAAAACPGgAAWyyitg0ZvivHuKYBnW1NBQ2Zu0B___Xl5n_16XF1F6ljav3AcefNR6lVtL1BWR1g',
+				// url: 'https://m.maoyan.com/mtrade/deal/order/submit/100459551?_v_=yes&promotionsId=0&cinemaId=35968&category=11&poiId=0&channelId=4&from=canary&token=AgGKJSyLBRY2K5CUWM_eEkZCGzXBDiH-6GdIPk_yiYNHxSN6O_GQye9x2QJJ346SrtOKTv4fP5Pw_gAAAACPGgAAWyyitg0ZvivHuKYBnW1NBQ2Zu0B___Xl5n_16XF1F6ljav3AcefNR6lVtL1BWR1g&ci=576',
+                
+				method: 'POST',
                 data: data,
                 success: (res) => {
                     uni.hideLoading();
@@ -153,7 +156,7 @@ export default {
             });
 
             uni.navigateTo({
-                url: `/pages/subPages/buy-snack/buy-snack?paramsStr=${paramsStr}`
+                url: `/pages/subPages/buy-snack/buy-snack?paramsStr=${encodeURIComponent(paramsStr)}`
             });
         }
     }

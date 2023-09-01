@@ -209,7 +209,7 @@ export default {
             });
 
             uni.navigateTo({
-                url: `/pages/subPages/snack-page/snack-page?paramsStr=${paramsStr}`
+                url: `/pages/subPages/snack-page/snack-page?paramsStr=${encodeURIComponent(paramsStr)}`
             });
         },
 

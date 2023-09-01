@@ -313,7 +313,7 @@ var _default = {
       });
 
       uni.navigateTo({
-        url: "/pages/subPages/snack-page/snack-page?paramsStr=".concat(paramsStr)
+        url: "/pages/subPages/snack-page/snack-page?paramsStr=".concat(encodeURIComponent(paramsStr))
       });
     },
     //购票

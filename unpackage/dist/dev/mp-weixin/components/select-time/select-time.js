@@ -147,6 +147,7 @@ var _default = {
      */
     startTime: {
       type: String,
+      // default: util.getToday()
       default: util.getToday()
     },
     /**
@@ -161,7 +162,7 @@ var _default = {
      */
     days: {
       type: Array,
-      default: null
+      default: ''
     }
   },
   mounted: function mounted() {
@@ -171,13 +172,16 @@ var _default = {
   methods: {
     attached: function attached() {
       //如果没有传递日期列表，就模拟一个日期列表
+      console.log(this.days);
       if (!this.days) {
+        console.log('如果没有传递日期列表，就模拟一个日期列表');
+        console.log(this.startTime);
         this.getWeek(this.startTime);
+        console.log(util.getToday());
       }
     },
     //模拟7天时间列表
     getWeek: function getWeek(startTime) {
-      var _this = this;
       var todayTomorrow = ['今天', '明天', '后天'];
       var week = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
       var days = [];
@@ -189,6 +193,7 @@ var _default = {
       }
       for (var i = 0; i < 7; i++) {
         var day = new Date(start);
+        console.log(day.getDate());
         day.setDate(day.getDate() + i); //往后推几天
         var num = (day - new Date(util.getToday())) / (3600000 * 24); //计算相隔几天，减少必须是“今天”0时0分
         days.push({
@@ -196,12 +201,17 @@ var _default = {
           //获取类似 “后天9月1日” 的字符串
           day: util.formatTime(day).split(' ')[0]
         });
+        console.log(days);
       }
       this.setData({
         daysClone: days
-      }, function () {
-        _this.selectDayFun();
-      });
+      }
+      // () => {
+      //    this.selectDayFun() ;
+      // }
+      );
+
+      console.log(this.daysClone);
     },
     selectDayFun: function selectDayFun(e) {
       var day = e && e.currentTarget.dataset.day || this.findDefaultDay() || this.days[0].day;
@@ -218,9 +228,10 @@ var _default = {
       });
     },
     findDefaultDay: function findDefaultDay() {
-      var _this2 = this;
+      var _this = this;
+      console.log(this.days);
       var day = this.days.find(function (item) {
-        return item.day === _this2.defaultSelect;
+        return item.day === _this.defaultSelect;
       });
       return day && day.day;
     } // findDefaultDay(){
@@ -250,13 +261,13 @@ var _default = {
     },
     days: {
       handler: function handler(days) {
-        var _this3 = this;
+        var _this2 = this;
         this.daysClone = this.clone(this.days);
         if (Array.isArray(days) && days.length) {
           this.setData({
             daysClone: days
           }, function () {
-            _this3.selectDayFun();
+            _this2.selectDayFun();
           });
         }
       },

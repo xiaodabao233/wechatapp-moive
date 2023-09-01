@@ -178,7 +178,7 @@ var _default = {
     };
   },
   onLoad: function onLoad(opt) {
-    var paramsObj = JSON.parse(opt.paramsStr);
+    var paramsObj = JSON.parse(decodeURIComponent(opt.paramsStr));
     this.initData(paramsObj);
   },
   methods: {
